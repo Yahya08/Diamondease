@@ -1,0 +1,86 @@
+.homepage {
+  background-color: #2A2D43;
+  color: white;
+  display: flex;
+}
+
+.navbar-container {
+  z-index: 10;
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.popular-games {
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.games-container {
+  display: flex;
+  gap: 16px; /* Use gap to create space between items */
+}
+
+.game-card {
+  background-color: #3B3F61;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  flex: none;
+  width: 160px; /* Fixed width for each game card */
+}
+
+.game-image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.game-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.btn-primary {
+  background-color: #5865F2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.carousel .legend {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* styles.css */
+.app-container {
+  display: flex;
+  /* Tetapkan ukuran yang sama untuk Sidebar dan Homepage */
+  width: 100%; /* Misalnya, tetapkan lebar keseluruhan */
+}
+
+/* Pastikan Sidebar memiliki lebar yang sesuai */
+.sidebar {
+  width: 250px;
+  /* Sisanya gaya CSS untuk Sidebar */
+}
+
+/* Pastikan Homepage memiliki lebar yang sesuai */
+.homepage {
+  /* Sesuaikan gaya CSS untuk Homepage */
+  flex-grow: 1; /* Agar Homepage mengisi ruang yang tersedia */
+}
+

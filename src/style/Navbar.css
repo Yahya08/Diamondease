@@ -1,0 +1,76 @@
+/* Mengatur tampilan dasar navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c2c54;
+    color: #fff;
+}
+
+/* Mengatur logo navbar */
+.navbar-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Mengatur tampilan search bar */
+.navbar-search {
+    display: flex;
+    align-items: center;
+    background-color: #3b3b6d;
+    border-radius: 20px;
+    padding: 5px 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Mengatur input search bar */
+.navbar-search input {
+    border: none;
+    background: none;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+/* Mengatur tombol microphone */
+.navbar-search button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mengatur ikon microphone */
+.navbar-search button svg {
+    font-size: 18px;
+}
+
+/* Mengatur tampilan ikon navbar */
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Mengatur ikon bendera */
+.navbar-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+
+/* Mengatur tampilan ikon profil */
+.profile-icon {
+    background-color: #1c1c3c;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
