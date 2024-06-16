@@ -2,14 +2,11 @@ import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Component/NavbarComponent';
 import Sidebar from '../Component/Sidebar';
-
 import '../style/Homepage.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
 
 const Homepage = () => {
     const navigate = useNavigate();
@@ -24,20 +21,21 @@ const Homepage = () => {
         { name: "Mobile Legends: Bang Bang (MobaPay)", image: "https://cdn.unipin.com/images/icon_product_pages/1578906433-icon-Game-icon-4.jpg", buttonText: "TOP UP" },
         { name: "Genshin Impact", image: "https://cdn.unipin.com/images/icon_product_pages/1663645620-icon-1662619195-icon-1662082730-icon-Tower%20of%20Fantasy%20logo%20-%201%20jpg.jpg", buttonText: "TOP UP" },
         { name: "White Out Survival", image: "https://cdn.unipin.com/images/icon_product_pages/1698647484-icon-White%20Out%20Survival_11zon.jpg", buttonText: "TOP UP" },
-    
-      ];
-    const seluler=[
-      { name: "call of dutty", image:"https://cdn.unipin.com/images/icon_product_pages/1633599388-icon-Icon_1024.jpg", buttonText: "TOP UP"},
-      { name: "Mobile Legends: Bang Bang", image: "https://cdn.unipin.com/images/icon_product_pages/1714098015-icon-mlbb icon 200x200_11zon.png", buttonText: "TOP UP" },
-      { name: "Genshin Impact", image: "https://cdn.unipin.com/images/icon_product_pages/1663645620-icon-1662619195-icon-1662082730-icon-Tower%20of%20Fantasy%20logo%20-%201%20jpg.jpg", buttonText: "TOP UP" },
-      { name: "Immortal Kingdoms M", image: "https://cdn.unipin.com/images/icon_product_pages/1711952993-icon-icon_11zon.jpg", buttonText: "TOP UP" },
-      { name: "Undawn", image: "https://cdn.unipin.com/images/icon_product_pages/1689159121-icon-garena-undawn.jpg", buttonText: "TOP UP" },
     ];
-    const pc=[
-      { name: "Hello Cafe", image:"https://cdn.unipin.com/images/icon_product_pages/1710303200-icon-Hello%20Cafe_11zon.png", buttonText: "TOP UP"},
-      { name: "Clash Royal", image:"https://cdn.unipin.com/images/icon_product_pages/1696470388-icon-Clash%20Royale%20Icon%20200x200.jpg", buttonText: "TOP UP"},
-      { name: "Astral Guardians : Cyber Fantasy", image:"https://cdn.unipin.com/images/icon_product_pages/1603346179-icon-eyougame.jpg", buttonText: "TOP UP"}
-    ]
+
+    const seluler = [
+        { name: "Call of Duty", image: "https://cdn.unipin.com/images/icon_product_pages/1633599388-icon-Icon_1024.jpg", buttonText: "TOP UP" },
+        { name: "Mobile Legends: Bang Bang", image: "https://cdn.unipin.com/images/icon_product_pages/1714098015-icon-mlbb icon 200x200_11zon.png", buttonText: "TOP UP" },
+        { name: "Genshin Impact", image: "https://cdn.unipin.com/images/icon_product_pages/1663645620-icon-1662619195-icon-1662082730-icon-Tower%20of%20Fantasy%20logo%20-%201%20jpg.jpg", buttonText: "TOP UP" },
+        { name: "Immortal Kingdoms M", image: "https://cdn.unipin.com/images/icon_product_pages/1711952993-icon-icon_11zon.jpg", buttonText: "TOP UP" },
+        { name: "Undawn", image: "https://cdn.unipin.com/images/icon_product_pages/1689159121-icon-garena-undawn.jpg", buttonText: "TOP UP" },
+    ];
+
+    const pc = [
+        { name: "Hello Cafe", image: "https://cdn.unipin.com/images/icon_product_pages/1710303200-icon-Hello%20Cafe_11zon.png", buttonText: "TOP UP" },
+        { name: "Clash Royale", image: "https://cdn.unipin.com/images/icon_product_pages/1696470388-icon-Clash%20Royale%20Icon%20200x200.jpg", buttonText: "TOP UP" },
+        { name: "Astral Guardians : Cyber Fantasy", image: "https://cdn.unipin.com/images/icon_product_pages/1603346179-icon-eyougame.jpg", buttonText: "TOP UP" },
+    ];
 
     // Refs untuk mengontrol pergerakan scroll
     const scrollContainerRef1 = useRef(null);
@@ -81,16 +79,16 @@ const Homepage = () => {
             containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
         }
     };
-    const navigateToDetails = () => {
-        navigate('./DetailPage');
-    };
 
+    const navigateToDetails = () => {
+        navigate('/detailpage');
+    };
 
     return (
         <div className="homepage min-h-screen bg-[#2A2D43] text-white flex flex-col">
             <Sidebar />
             <div className="content flex-grow flex flex-col">
-              <Navbar className="navbar"  style={{ position: 'fixed', }}/>
+                <Navbar className="navbar" style={{ position: 'fixed' }} />
                 <div className="p-4 flex-grow">
                     {/* Carousel Section */}
                     <Carousel showThumbs={false} autoPlay infiniteLoop showIndicators>
@@ -134,9 +132,11 @@ const Homepage = () => {
                         </div>
                     </section>
 
-                    <section className="game-category mt-8">
-                        <h3 className="text-xl mb-4">Game Seluler</h3>
-                        <div className="popular-games relative">
+                    {/* Mobile Games Section */}
+                    <section className="mobile-games">
+                        <h2 className="text-2xl font-bold my-4">GAME MOBILE</h2>
+                        <h3 className="text-xl mb-4">Game Seru di Smartphone Kamu</h3>
+                        <div className="relative">
                             <button className="scroll-button left" onClick={() => scroll('left', scrollContainerRef2)}>&#9664;</button>
                             <div
                                 className="games-container flex overflow-x-auto no-scrollbar"
@@ -157,21 +157,17 @@ const Homepage = () => {
                             </div>
                             <button className="scroll-button right" onClick={() => scroll('right', scrollContainerRef2)}>&#9654;</button>
                         </div>
+                        <div className="flex justify-center mt-4">
+                            <button className="btn btn-primary" onClick={navigateToDetails}>Selengkapnya</button>
+                        </div>
                     </section>
 
-                    <section className="game-category mt-8">
-                        <h3 className="text-xl mb-4">Game PC</h3>
-                        <div className="popular-games relative">
-                            <button className="scroll-button left" onClick={() => scroll('left', scrollContainerRef2)}>&#9664;</button>
-                            <div
-                                className="games-container flex overflow-x-auto no-scrollbar"
-                                ref={scrollContainerRef2}
-                                onMouseDown={(e) => handleMouseDown(e, scrollContainerRef2)}
-                                onMouseMove={(e) => handleMouseMove(e, scrollContainerRef2)}
-                                onMouseUp={handleMouseUp}
-                                onMouseOut={handleMouseOut}
-                                style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-                            >
+                    {/* PC Games Section */}
+                    <section className="pc-games">
+                        <h2 className="text-2xl font-bold my-4">GAME PC</h2>
+                        <h3 className="text-xl mb-4">Game Seru di Komputer Kamu</h3>
+                        <div className="relative">
+                            <div className="games-container flex overflow-x-auto no-scrollbar">
                                 {pc.map((game, index) => (
                                     <div className="game-card" key={index}>
                                         <img src={game.image} alt={game.name} className="game-image" />
@@ -180,104 +176,28 @@ const Homepage = () => {
                                     </div>
                                 ))}
                             </div>
-                            <button className="scroll-button right" onClick={() => scroll('right', scrollContainerRef2)}>&#9654;</button>
                         </div>
                     </section>
 
-                    <section className="game-category mt-8">
-                        <h3 className="text-xl mb-4">Voucher Game</h3>
-                        <div className="popular-games relative">
-                            <button className="scroll-button left" onClick={() => scroll('left', scrollContainerRef2)}>&#9664;</button>
-                            <div
-                                className="games-container flex overflow-x-auto no-scrollbar"
-                                ref={scrollContainerRef2}
-                                onMouseDown={(e) => handleMouseDown(e, scrollContainerRef2)}
-                                onMouseMove={(e) => handleMouseMove(e, scrollContainerRef2)}
-                                onMouseUp={handleMouseUp}
-                                onMouseOut={handleMouseOut}
-                                style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-                            >
-                                {seluler.map((game, index) => (
-                                    <div className="game-card" key={index}>
-                                        <img src={game.image} alt={game.name} className="game-image" />
-                                        <h3 className="game-title">{game.name}</h3>
-                                        <button className="btn btn-primary">{game.buttonText}</button>
-                                    </div>
-                                ))}
-                            </div>
-                            <button className="scroll-button right" onClick={() => scroll('right', scrollContainerRef2)}>&#9654;</button>
+                    {/* Social Media Section */}
+                    <section className="social-media mt-8">
+                        <h2 className="text-2xl font-bold mb-4">FOLLOW US</h2>
+                        <div className="flex justify-center space-x-4">
+                            <a href="https://www.facebook.com/UniPinIndonesia" target="_blank" rel="noopener noreferrer" className="text-white">
+                                <FontAwesomeIcon icon={faFacebook} size="2x" />
+                            </a>
+                            <a href="https://www.instagram.com/unipinindonesia/" target="_blank" rel="noopener noreferrer" className="text-white">
+                                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                            </a>
+                            <a href="https://www.tiktok.com/@unipinindonesia" target="_blank" rel="noopener noreferrer" className="text-white">
+                                <FontAwesomeIcon icon={faTiktok} size="2x" />
+                            </a>
+                            <a href="https://twitter.com/UniPinIndonesia" target="_blank" rel="noopener noreferrer" className="text-white">
+                                <FontAwesomeIcon icon={faTwitter} size="2x" />
+                            </a>
                         </div>
                     </section>
                 </div>
-
-                {/* Footer */}
-                <footer className="footer bg-[#2A2D43] text-white">
-                    <div className="footer-top">
-                        <h2>BERLANGGANAN</h2>
-                        <p>Dapatkan Penawaran Terbaik Sekarang!</p>
-                        <div className="social-icons">
-                            <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faTiktok} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
-                        </div>
-                    </div>
-                    <div className="footer-main">
-                        <div className="footer-section">
-                            <h3>UniPin</h3>
-                            <p>Universal Pin merupakan penyedia layanan pembayaran (PSP) terkemuka yang memfokuskan layanannya untuk game online dan produk digital lainnya yang tersebar di seluruh dunia.</p>
-                        </div>
-                        <div className="footer-section">
-                            <h3>Peta Situs</h3>
-                            <ul>
-                                <li><a href="#">Flash Top-Up</a></li>
-                                <li><a href="#">Voucher</a></li>
-                                <li><a href="#">Game Lainnya</a></li>
-                                <li><a href="#">UniPin Affiliates Program</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Dukungan Pelanggan</a></li>
-                                <li><a href="#">Penukaran Poin</a></li>
-                                <li><a href="#">Berita</a></li>
-                                <li><a href="#">
-                                Promo dan Acara</a></li>
-                                <li><a href="#">Karir</a></li>
-                                <li><a href="#">Korporasi</a></li>
-                                <li><a href="#">Saluran Pembayaran</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer-section">
-                            <h3>Saluran Pembayaran</h3>
-                            <Carousel showThumbs={false} autoPlay infiniteLoop showIndicators emulateTouch>
-                            
-                              <div className="payment-icons">
-                                  <img src={'https://cdn.unipin.com/images/payment_channels/indomaret.png'} alt="Payment 1" />
-                              </div> 
-                              <div className="payment-icons">
-                                  <img src={'https://cdn.unipin.com/images/payment_channels/1686891126-xl_axis.png'} alt="Payment 2" />
-                              </div> 
-                                <div className="payment-icons">
-                                    <img src={'https://cdn.unipin.com/images/payment_channels/1689845634-218043ea-642c-4230-9e93-34eae4eb014d.jpeg'} alt="Payment 3" />
-                                </div>
-                              <div className="payment-icons">
-                                  <img src={'https://cdn.unipin.com/images/payment_channels/1686821644-ovo.png'} alt="Payment 4" />
-                              </div>
-                              <div className="payment-icons">
-                                   <img src={'https://cdn.unipin.com/images/payment_channels/1686820486-dana.png'} alt="Payment 5" />
-                              </div>
-                                <div className="payment-icons">
-                                    <img src={'https://cdn.unipin.com/images/payment_channels/1702024410-Tri New Logo_150x56_black.png'} alt="Payment 6" />
-                                </div>
-                            </Carousel>
-                        </div>
-                    </div>
-                    <div className="footer-bottom">
-                        <p>Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementerian Perdagangan Republik Indonesia</p>
-                        <p>WhatsApp: <a href="tel:+6285311111010">0853-1111-1010</a></p>
-                        <p>© 2024 UniPin. Semua Hak Cipta</p>
-                        <p><a href="#">Website Terms and Conditions</a> | <a href="#">User Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
-                    </div>
-                </footer>
-               
             </div>
         </div>
     );

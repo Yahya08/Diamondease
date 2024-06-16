@@ -1,86 +1,210 @@
 .homepage {
+  display: flex;
+  min-height: 100vh;
   background-color: #2A2D43;
   color: white;
-  display: flex;
-}
-
-.navbar-container {
-  z-index: 10;
-  width: 100%;
-  position: relative;
 }
 
 .content {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  overflow: hidden;
+  margin-left: 250px; /* Adjust based on sidebar width */
+  overflow-y: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust based on sidebar width */
+  height: 100%;
+  background-color: #1F1F2E;
+  z-index: 1000; /* Ensure it is on top */
 }
 
 .popular-games {
-  overflow-x: auto;
-  padding: 16px;
+  overflow-x: hidden;
+  padding-bottom: 1rem;
+  position: relative;
 }
 
 .games-container {
   display: flex;
-  gap: 16px; /* Use gap to create space between items */
+  gap: 1rem;
+  padding: 0.5rem;
+  scroll-behavior: smooth; /* Add smooth scrolling */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .game-card {
-  background-color: #3B3F61;
-  padding: 16px;
+  flex-shrink: 0;
+  width: 200px;
+  background-color: #2E2E3E;
   border-radius: 8px;
+  overflow: hidden;
   text-align: center;
-  flex: none;
-  width: 160px; /* Fixed width for each game card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure elements are spaced equally */
 }
 
 .game-image {
-  width: 96px;
-  height: 96px;
+  width: 100%;
+  height: 150px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  display: block; /* Remove the scroll inside the image */
 }
 
 .game-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  flex-grow: 1;
 }
 
 .btn-primary {
-  background-color: #5865F2;
+  background-color: #5567FF;
+  border: none;
+  padding: 0.5rem 1rem;
   color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.carousel .legend {
-  background: rgba(0, 0, 0, 0.5);
-  bottom: 20px;
-  left: 20px;
-  padding: 10px;
-  border-radius: 8px;
+.btn-primary:hover {
+  background-color: #4455cc;
 }
 
-/* styles.css */
-.app-container {
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.scroll-button.left {
+  left: -25px; /* Adjust as necessary */
+}
+
+.scroll-button.right {
+  right: -25px; /* Adjust as necessary */
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.game-category {
+  margin-top: 2rem;
+}
+
+.game-category h3 {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: #2A2D43;  /* Match the background color */
+  color: white;
+  padding: 2rem;
   display: flex;
-  /* Tetapkan ukuran yang sama untuk Sidebar dan Homepage */
-  width: 100%; /* Misalnya, tetapkan lebar keseluruhan */
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Pastikan Sidebar memiliki lebar yang sesuai */
-.sidebar {
-  width: 250px;
-  /* Sisanya gaya CSS untuk Sidebar */
+.footer-top {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Pastikan Homepage memiliki lebar yang sesuai */
-.homepage {
-  /* Sesuaikan gaya CSS untuk Homepage */
-  flex-grow: 1; /* Agar Homepage mengisi ruang yang tersedia */
+.footer-top h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
+
+.footer-top p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+  font-size: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.payment-icons img {
+  margin: 0 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.875rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.footer-bottom p {
+  margin: 0.5rem 0;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+
+
 

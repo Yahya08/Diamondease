@@ -1,0 +1,71 @@
+/* Vidos.css */
+
+.vidos-container {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #121212;
+  }
+  
+  .vidos-header .hero-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .vidos-header .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .vidos-header .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 20px;
+  }
+  
+  .vidos-header .hero-title {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .vidos-header .hero-description {
+    font-size: 1rem;
+  }
+  
+  .playlist-section, .latest-videos-section {
+    padding: 20px;
+  }
+  
+  .playlist-section h2, .latest-videos-section h2 {
+    margin-bottom: 15px;
+  }
+  
+  .playlist-grid, .latest-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .playlist-item, .latest-video-item {
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .playlist-item img, .latest-video-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .playlist-item p, .latest-video-item p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+  }
+  

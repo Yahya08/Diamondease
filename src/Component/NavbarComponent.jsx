@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar-logo">
-                DiamondEase
+               
             </div>
             <div className="navbar-search">
                 <input type="text" placeholder="Search..." />
