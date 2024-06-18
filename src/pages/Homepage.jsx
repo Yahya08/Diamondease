@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Homepage = () => {
     const navigate = useNavigate();
 
+    // Data untuk kategori games
     const games = [
         { name: "UniPin Voucher (ID)", image: "https://cdn.unipin.com/images/icon_product_pages/1658817763-icon-200x200_icon%20ff.jpg", buttonText: "TOP UP" },
         { name: "Honkai: Star Rail", image: "https://cdn.unipin.com/images/icon_product_pages/1710829444-icon-Oversea Icon-1024_11zon.png", buttonText: "TOP UP" },
@@ -24,24 +25,42 @@ const Homepage = () => {
         { name: "Mobile Legends: Bang Bang (MobaPay)", image: "https://cdn.unipin.com/images/icon_product_pages/1578906433-icon-Game-icon-4.jpg", buttonText: "TOP UP" },
         { name: "Genshin Impact", image: "https://cdn.unipin.com/images/icon_product_pages/1663645620-icon-1662619195-icon-1662082730-icon-Tower%20of%20Fantasy%20logo%20-%201%20jpg.jpg", buttonText: "TOP UP" },
         { name: "White Out Survival", image: "https://cdn.unipin.com/images/icon_product_pages/1698647484-icon-White%20Out%20Survival_11zon.jpg", buttonText: "TOP UP" },
-    
-      ];
-    const seluler=[
-      { name: "call of dutty", image:"https://cdn.unipin.com/images/icon_product_pages/1633599388-icon-Icon_1024.jpg", buttonText: "TOP UP"},
-      { name: "Mobile Legends: Bang Bang", image: "https://cdn.unipin.com/images/icon_product_pages/1714098015-icon-mlbb icon 200x200_11zon.png", buttonText: "TOP UP" },
-      { name: "Genshin Impact", image: "https://cdn.unipin.com/images/icon_product_pages/1663645620-icon-1662619195-icon-1662082730-icon-Tower%20of%20Fantasy%20logo%20-%201%20jpg.jpg", buttonText: "TOP UP" },
-      { name: "Immortal Kingdoms M", image: "https://cdn.unipin.com/images/icon_product_pages/1711952993-icon-icon_11zon.jpg", buttonText: "TOP UP" },
-      { name: "Undawn", image: "https://cdn.unipin.com/images/icon_product_pages/1689159121-icon-garena-undawn.jpg", buttonText: "TOP UP" },
     ];
-    const pc=[
-      { name: "Hello Cafe", image:"https://cdn.unipin.com/images/icon_product_pages/1710303200-icon-Hello%20Cafe_11zon.png", buttonText: "TOP UP"},
-      { name: "Clash Royal", image:"https://cdn.unipin.com/images/icon_product_pages/1696470388-icon-Clash%20Royale%20Icon%20200x200.jpg", buttonText: "TOP UP"},
-      { name: "Astral Guardians : Cyber Fantasy", image:"https://cdn.unipin.com/images/icon_product_pages/1603346179-icon-eyougame.jpg", buttonText: "TOP UP"}
-    ]
+
+    // Data untuk kategori game seluler
+    const seluler = [
+        { name: "call of dutty", image: "https://cdn.unipin.com/images/icon_product_pages/1633599388-icon-Icon_1024.jpg", buttonText: "TOP UP" },
+        { name: "Mobile Legends: Bang Bang", image: "https://cdn.unipin.com/images/icon_product_pages/1714098015-icon-mlbb icon 200x200_11zon.png", buttonText: "TOP UP" },
+        { name: "Genshin Impact", image: "https://cdn.unipin.com/images/icon_product_pages/1663645620-icon-1662619195-icon-1662082730-icon-Tower%20of%20Fantasy%20logo%20-%201%20jpg.jpg", buttonText: "TOP UP" },
+        { name: "Immortal Kingdoms M", image: "https://cdn.unipin.com/images/icon_product_pages/1711952993-icon-icon_11zon.jpg", buttonText: "TOP UP" },
+        { name: "Undawn", image: "https://cdn.unipin.com/images/icon_product_pages/1689159121-icon-garena-undawn.jpg", buttonText: "TOP UP" },
+        { name: "Revelation", image: "https://cdn.unipin.com/images/icon_product_pages/1677555384-icon-revelation.png", buttonText: "TOP UP" },
+        { name: "Icon game", image: "https://cdn.unipin.com/images/icon_product_pages/1645066883-icon-WeChat%20Image_20220217093952.jpg", buttonText: "TOP UP" },
+    ];
+
+    // Data untuk kategori game PC
+    const pc = [
+        { name: "Hello Cafe", image: "https://cdn.unipin.com/images/icon_product_pages/1710303200-icon-Hello%20Cafe_11zon.png", buttonText: "TOP UP" },
+        { name: "Clash Royal", image: "https://cdn.unipin.com/images/icon_product_pages/1696470388-icon-Clash%20Royale%20Icon%20200x200.jpg", buttonText: "TOP UP" },
+        { name: "Astral Guardians : Cyber Fantasy", image: "https://cdn.unipin.com/images/icon_product_pages/1603346179-icon-eyougame.jpg", buttonText: "TOP UP" },
+        { name: "Clans of clans", image: "https://cdn.unipin.com/images/icon_product_pages/1571814027-icon-1559011491-icon-1557743544-icon-point_blank.jpg", buttonText: "TOP UP" },
+        { name: "Hello Cafe", image: "https://cdn.unipin.com/images/icon_product_pages/1648179143-icon-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220325112829.jpg", buttonText: "TOP UP" },
+        { name: "Hello Cafe", image: "https://cdn.unipin.com/images/icon_product_pages/1708673517-icon-65b2e451095de_com.levelinfinite.supernba2021%20(1).png", buttonText: "TOP UP" },
+        { name: "Hello Cafe", image: "https://cdn.unipin.com/images/icon_product_pages/1710303200-icon-Hello%20Cafe_11zon.png", buttonText: "TOP UP" },
+    ];
+
+    // Data untuk kategori voucher game
+    const voucher = [
+        { name: "Voucher 1", image: "https://cdn.unipin.com/images/icon_product_pages/1711952993-icon-icon_11zon.jpg", buttonText: "TOP UP" },
+        { name: "Voucher 2", image: "https://cdn.unipin.com/images/icon_product_pages/1714098015-icon-mlbb icon 200x200_11zon.png", buttonText: "TOP UP" },
+        { name: "Voucher 3", image: "https://cdn.unipin.com/images/icon_product_pages/1663645620-icon-1662619195-icon-1662082730-icon-Tower%20of%20Fantasy%20logo%20-%201%20jpg.jpg", buttonText: "TOP UP" },
+    ];
 
     // Refs untuk mengontrol pergerakan scroll
     const scrollContainerRef1 = useRef(null);
     const scrollContainerRef2 = useRef(null);
+    const scrollContainerRef3 = useRef(null);
+    const scrollContainerRef4 = useRef(null);
 
     // State untuk mengontrol pergerakan scroll
     const [isDragging, setIsDragging] = useState(false);
@@ -81,16 +100,17 @@ const Homepage = () => {
             containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
         }
     };
+
+    // Navigasi ke halaman detail
     const navigateToDetails = () => {
         navigate('./DetailPage');
     };
-
 
     return (
         <div className="homepage min-h-screen bg-[#2A2D43] text-white flex flex-col">
             <Sidebar />
             <div className="content flex-grow flex flex-col">
-              <Navbar className="navbar"  style={{ position: 'fixed', }}/>
+                <Navbar style={{ position: 'fixed' }} />
                 <div className="p-4 flex-grow">
                     {/* Carousel Section */}
                     <Carousel showThumbs={false} autoPlay infiniteLoop showIndicators>
@@ -134,6 +154,7 @@ const Homepage = () => {
                         </div>
                     </section>
 
+                    {/* Game Seluler Section */}
                     <section className="game-category mt-8">
                         <h3 className="text-xl mb-4">Game Seluler</h3>
                         <div className="popular-games relative">
@@ -159,15 +180,16 @@ const Homepage = () => {
                         </div>
                     </section>
 
+                    {/* Game PC Section */}
                     <section className="game-category mt-8">
                         <h3 className="text-xl mb-4">Game PC</h3>
                         <div className="popular-games relative">
-                            <button className="scroll-button left" onClick={() => scroll('left', scrollContainerRef2)}>&#9664;</button>
+                            <button className="scroll-button left" onClick={() => scroll('left', scrollContainerRef3)}>&#9664;</button>
                             <div
                                 className="games-container flex overflow-x-auto no-scrollbar"
-                                ref={scrollContainerRef2}
-                                onMouseDown={(e) => handleMouseDown(e, scrollContainerRef2)}
-                                onMouseMove={(e) => handleMouseMove(e, scrollContainerRef2)}
+                                ref={scrollContainerRef3}
+                                onMouseDown={(e) => handleMouseDown(e, scrollContainerRef3)}
+                                onMouseMove={(e) => handleMouseMove(e, scrollContainerRef3)}
                                 onMouseUp={handleMouseUp}
                                 onMouseOut={handleMouseOut}
                                 style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
@@ -180,24 +202,25 @@ const Homepage = () => {
                                     </div>
                                 ))}
                             </div>
-                            <button className="scroll-button right" onClick={() => scroll('right', scrollContainerRef2)}>&#9654;</button>
+                            <button className="scroll-button right" onClick={() => scroll('right', scrollContainerRef3)}>&#9654;</button>
                         </div>
                     </section>
 
+                    {/* Voucher Game Section */}
                     <section className="game-category mt-8">
                         <h3 className="text-xl mb-4">Voucher Game</h3>
                         <div className="popular-games relative">
-                            <button className="scroll-button left" onClick={() => scroll('left', scrollContainerRef2)}>&#9664;</button>
+                            <button className="scroll-button left" onClick={() => scroll('left', scrollContainerRef4)}>&#9664;</button>
                             <div
                                 className="games-container flex overflow-x-auto no-scrollbar"
-                                ref={scrollContainerRef2}
-                                onMouseDown={(e) => handleMouseDown(e, scrollContainerRef2)}
-                                onMouseMove={(e) => handleMouseMove(e, scrollContainerRef2)}
+                                ref={scrollContainerRef4}
+                                onMouseDown={(e) => handleMouseDown(e, scrollContainerRef4)}
+                                onMouseMove={(e) => handleMouseMove(e, scrollContainerRef4)}
                                 onMouseUp={handleMouseUp}
                                 onMouseOut={handleMouseOut}
                                 style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
                             >
-                                {seluler.map((game, index) => (
+                                {voucher.map((game, index) => (
                                     <div className="game-card" key={index}>
                                         <img src={game.image} alt={game.name} className="game-image" />
                                         <h3 className="game-title">{game.name}</h3>
@@ -205,7 +228,7 @@ const Homepage = () => {
                                     </div>
                                 ))}
                             </div>
-                            <button className="scroll-button right" onClick={() => scroll('right', scrollContainerRef2)}>&#9654;</button>
+                            <button className="scroll-button right" onClick={() => scroll('right', scrollContainerRef4)}>&#9654;</button>
                         </div>
                     </section>
                 </div>
