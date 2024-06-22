@@ -104,7 +104,7 @@ const DetailPage = () => {
                     </div>
                     <div className="footer-main">
                         <div className="footer-section">
-                            <h3>UniPin</h3>
+                            <h3>Diamondease</h3>
                             <p>Universal Pin merupakan penyedia layanan pembayaran (PSP) terkemuka yang memfokuskan layanannya untuk game online dan produk digital lainnya yang tersebar di seluruh dunia.</p>
                         </div>
                         <div className="footer-section">
@@ -113,7 +113,7 @@ const DetailPage = () => {
                                 <li><a href="#">Flash Top-Up</a></li>
                                 <li><a href="#">Voucher</a></li>
                                 <li><a href="#">Game Lainnya</a></li>
-                                <li><a href="#">UniPin Affiliates Program</a></li>
+                                <li><a href="#">Diamondease Affiliates Program</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Dukungan Pelanggan</a></li>
                                 <li><a href="#">Penukaran Poin</a></li>
@@ -153,7 +153,7 @@ const DetailPage = () => {
                     <div className="footer-bottom">
                         <p>Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementerian Perdagangan Republik Indonesia</p>
                         <p>WhatsApp: <a href="tel:+6285311111010">0853-1111-1010</a></p>
-                        <p>© 2024 UniPin. Semua Hak Cipta</p>
+                        <p>© 2024 Diamondease. Semua Hak Cipta</p>
                         <p><a href="#">Website Terms and Conditions</a> | <a href="#">User Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
                     </div>
                 </footer>

@@ -13,7 +13,7 @@ const NavbarComponent = () => {
             </div> */}
             <div className="navbar-center">
                 <div className="navbar-search">
-                    <input type="text" placeholder="Cari di UniPin..." />
+                    <input type="text" placeholder="Cari di Dimaondease..." />
                     <FaSearch className="search-icon" />
                 </div>
             </div>
